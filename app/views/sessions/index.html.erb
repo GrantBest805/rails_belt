@@ -1,0 +1,28 @@
+<h3><u>Lender</u></h3>
+<form action="/lenders" method="POST">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	First Name:<input type="text" name="lender[first_name]">
+	Last Name:<input type="text" name="lender[last_name]">
+	Email: <input type="text" name="lender[email]">
+	Password: <input type="text" name="lender[password]">
+	Money: <input type="number" name="lender[money]">
+	<input type="submit" value="Register">
+</form>
+<br>
+<a href="/sessions/login_b">Aleady a member?</a>
+<h3><u>Borrower</u></h3>
+<form action="/borrowers" method="POST">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="hidden" name="borrower[raised]">
+	First Name:<input type="text" name="borrower[first_name]">
+	Last Name:<input type="text" name="borrower[last_name]">
+	Email: <input type="text" name="borrower[email]">
+	Password: <input type="text" name="borrower[password]">
+	Need Money for: <input type="text" name="borrower[purpose]">
+	Description: <textarea name="borrower[description]"></textarea>
+	<br>
+	Amount Needed: <input type="number" name="borrower[money]">
+	<input type="submit" value="Register">
+</form>
+<br>
+<a href="/sessions/login_l">Aleady a member?</a>

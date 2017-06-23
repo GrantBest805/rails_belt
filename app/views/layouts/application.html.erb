@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BeltLending</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+<% if flash[:errors] %>
+	  <% flash[:errors].each do |e| %>
+	    <%= e %>
+	  <% end %>
+	<% end %>
+	<% if current_user %>
+		<a href="/sessions/<%=current_user.id%>" data-method="DELETE">Log Out</a>
+	<% end %>
+<%= yield %>
+
+</body>
+</html>

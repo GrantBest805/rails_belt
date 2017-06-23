@@ -1,0 +1,20 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: ubuntu
+  pool: 5
+
+development:
+  <<: *default
+  database: belt_lending_development
+
+
+test:
+  <<: *default
+  database: belt_lending_test
+
+production:
+  <<: *default
+  database: belt_lending_production
+  password: <%= ENV['BELT_LENDING_DATABASE_PASSWORD'] %>

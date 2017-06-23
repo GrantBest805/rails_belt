@@ -1,0 +1,11 @@
+<h2><u>Login Borrower</u></h2>
+<form action="/sessions" method="POST">
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+	<input type="hidden" name="_method" value="PUT">
+	Email: <input type="text" name="borrower[email]">
+	Password: <input type="text" name="borrower[password]">
+	<input type="submit" value="Login">
+
+</form>
+
+<a href="/">Click here to register</a>
